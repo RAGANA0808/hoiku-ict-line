@@ -57,7 +57,7 @@ LINE公式アカウントを保護者の入口とする、オープンソース�
 ### セットアップ
 
 ```bash
-git clone https://github.com/<your-org>/hoiku-ict.git
+git clone https://github.com/RAGANA0808/hoiku-ict-line.git
 cd hoiku-ict
 pnpm install
 
