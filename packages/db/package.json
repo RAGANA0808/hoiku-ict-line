@@ -13,9 +13,10 @@
     "typecheck": "tsc --noEmit",
     "lint": "echo 'lint placeholder'",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate",
+    "db:migrate": "tsx --env-file=../../apps/web/.env.local src/migrate.ts",
     "db:studio": "drizzle-kit studio",
     "seed": "tsx --env-file=../../apps/web/.env.local src/seed.ts",
+    "setup-staff": "tsx --env-file=../../apps/web/.env.local src/setup-staff.ts",
     "clean": "rm -rf .turbo dist drizzle/meta"
   },
   "dependencies": {
