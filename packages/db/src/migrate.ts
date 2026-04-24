@@ -31,8 +31,8 @@ const listApplied = async (): Promise<Set<string>> => {
 
 const main = async () => {
   console.log('🔌 DB 接続確認中...');
-  const [{ now }] = await sql<{ now: string }[]>`select now()::text as now`;
-  console.log(`  サーバー時刻: ${now}`);
+  const rows = await sql<{ now: string }[]>`select now()::text as now`;
+  console.log(`  サーバー時刻: ${rows[0]?.now ?? 'unknown'}`);
 
   await ensureMigrationTable();
   const applied = await listApplied();
